@@ -5,4 +5,3 @@ SQLAlchemy
 psycopg2-binary
 alembic
 pytest
-psycopg2-binary
