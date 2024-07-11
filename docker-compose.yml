@@ -22,5 +22,15 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    depends_on:
+      - db
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DATABASE_URL=${DATABASE_URL}
+
 volumes:
   pgdata:
