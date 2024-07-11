@@ -1,0 +1,7 @@
+Flask
+openai
+python-dotenv
+SQLAlchemy
+psycopg2-binary
+alembic
+pytest
