@@ -33,6 +33,7 @@ services:
       - DATABASE_URL=${DATABASE_URL}
     depends_on:
       - db
+    command: pytest tests/
 
 volumes:
   pgdata:

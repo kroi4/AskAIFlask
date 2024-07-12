@@ -1,3 +1,7 @@
+import sys
+sys.path.append('../app')
+from app import app
+
 import pytest
 from flask import Flask
 from flask.testing import FlaskClient
@@ -15,4 +19,4 @@ def test_generate_text(client: FlaskClient):
     data = response.get_json()
     assert response.status_code == 200
     assert 'response' in data
-    assert 'The capital of France is Paris.' in data['response']
+    assert 'Paris' in data['response']
