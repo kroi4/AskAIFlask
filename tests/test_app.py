@@ -1,15 +1,11 @@
-import sys
-sys.path.append('../app')
-from app import app
-
 import pytest
-from flask import Flask
 from flask.testing import FlaskClient
-from app import app
+from app import create_app
 from typing import Generator
 
 @pytest.fixture
 def client() -> Generator[FlaskClient, None, None]:
+    app = create_app()
     app.config['TESTING'] = True
     with app.test_client() as client:
         yield client

@@ -31,9 +31,9 @@ services:
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - DATABASE_URL=${DATABASE_URL}
+      - PYTHONPATH=/app
     depends_on:
       - db
-    command: pytest tests/
 
 volumes:
   pgdata:
