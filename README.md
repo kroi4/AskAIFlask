@@ -85,10 +85,6 @@ my_flask_app/
 
 If you want to contribute to this project, please fork the repository and create a pull request with your changes. Ensure that your code follows the project's coding standards and includes appropriate tests.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
 ## Acknowledgements
 
 - [OpenAI](https://openai.com/) for their amazing API.
