@@ -11,10 +11,8 @@ def create_app():
     app.config['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
     app.config['DATABASE_URL'] = os.getenv('DATABASE_URL')
 
-    # הגדרת מסד הנתונים
     Base.metadata.create_all(engine)
 
-    # רישום נקודות הקצה
     app.register_blueprint(main)
 
     return app
