@@ -1,4 +1,3 @@
-# app/routes.py
 from flask import Blueprint, request, jsonify
 import openai
 from .models import SessionLocal
