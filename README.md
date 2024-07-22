@@ -56,7 +56,7 @@ Once the containers are up and running, you can access the application at `http:
 
 To run the tests, use the following command:
 ```sh
-docker-compose run test
+docker-compose run askaiflask.test
 ```
 
 ## Project Structure

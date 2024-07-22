@@ -13,7 +13,10 @@ main = Blueprint('main', __name__)
 @main.route('/ask', methods=['POST'])
 def generate_text():
     data = request.json
-    prompt = data.get('prompt', '')
+    prompt = data.get('prompt', None)
+
+    if (prompt is None):
+        return jsonify({"error": "Prompt is required"}), 400
 
     try:
         client = openai.OpenAI(api_key=openai.api_key)

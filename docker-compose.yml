@@ -22,7 +22,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
-  test:
+  askaiflask.test:
     build:
       context: .
       dockerfile: Dockerfile.test
